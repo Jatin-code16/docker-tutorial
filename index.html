@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+                       <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <body>
     <nav id="navbar">
         <div class="nav-container">
-            <h1 class="nav-logo">Docker Tutorial</h1>
+            <h1 class="logo">CICD SUCCESSFULL</h1>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#basics">Basics</a></li>
@@ -27,20 +27,28 @@
         </div>
     </nav>
 
-    <section id="hero" class="section">
-        <div class="container">
-            <h1>Learn Docker from Scratch</h1>
-            <p>Docker is a tool that helps you package and run applications in isolated environments called containers, making development and deployment easier.</p>
-            <button class="btn" onclick="scrollToSection('basics')">Start Learning</button>
-            <div class="docker-icon">
-                <!-- Simple CSS-based Docker icon -->
-                <div class="docker-box">
-                    <div class="docker-layers">
-                        <div class="layer"></div>
-                        <div class="layer"></div>
-                        <div class="layer"></div>
-                    </div>
+    <section id="hero" class="section hero-section" aria-label="Hero banner showcasing Docker tutorial">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <p class="hero-kicker">Hands-on learning</p>
+                <h1>Learn Docker from Scratch</h1>
+                <p class="hero-subhead">Understand containers visually, practice essential commands, and deploy with confidence using this beginner-friendly guide.</p>
+                <div class="hero-cta">
+                    <button class="cta-button" data-scroll-target="basics">Start Learning</button>
+                    <a class="cta-button" href="#commands">Browse Commands</a>
                 </div>
+            </div>
+            <div class="hero-visual" id="hero-visual" aria-hidden="true">
+                <canvas id="hero-canvas" class="hero-canvas" role="presentation"></canvas>
+                <img
+                    id="hero-fallback"
+                    class="hero-fallback"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFiUlEQVR4nO3dMQ7CMAwF0P7/T9sKwkAhg5mOyq7QWSv8tStHoBKwM8cDz/Px+z7LeF8n6+hrt0nsc7vHWlXRNmvamtunPevEm3lY9nZ+/P7+mz3v+eR9Hqfz+cflb2fOxUQjEYjEYjEYjEYoLYINaMY0r9P9PsbYI+MXWTyR/nzP0nvOBbCTsJuwm7CbsJuwm7Kc5OzzA7+Z78bq9h38YVd7DutG5HN3tOWf9tYb8eovq9XqdDr9fL4fC6XS6/XD4fD6enp6/v79/f398fHx7927t27du3fv379+/fv3+/fv37/u4rYINaPYJ8bdvZPZzvX6/W63W4XC6Xy+XyeTy+Xy+XweDx+v1+t9vt9vt9vt9vt9vt9vt9vn85mWf1dvtdrvdbrdbrdbjdbrdbjf75nxd+b9er1er1er1er1er1er1er1eV4mSa8uW7Dt5n97X7HWk7CxvCzsJOwm7Cbspzk7P8JMwZ+7n90v6bDe63a7Xa7Xa7Xw+Gw2Gw2G43G43G43G4/Go2+//+4rYINaMY0r9P9PsbYI+MXWTyR/nzP0nvOBbCTsJuwm7CbsJuwm7Kc5OzzA7+Z78bq9h38YVd7DutG5HN3tOWf9tYb8eqvr9fr9fr9fr9fr9fr9fr9/V4TTUajUaj0Wi0Wm0Wm8lk8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl8vl9YF8AWbqyoTrGeJwAAAABJRU5ErkJggg=="
+                    alt="Stylized Docker containers illustration"
+                    loading="lazy"
+                    decoding="async"
+                >
+                <div class="hero-loading" id="hero-loading" aria-live="polite">Loading 3D scene…</div>
             </div>
         </div>
     </section>
@@ -51,7 +59,7 @@
             <p>Docker is an open-source platform that automates the deployment, scaling, and management of applications using containerization. Containers allow you to package an app with all its dependencies into a standardized unit.</p>
             <h3>Before Docker vs With Docker</h3>
             <div class="comparison">
-                <div class="comp-item">
+                <div class="card">
                     <h4>Before Docker</h4>
                     <ul>
                         <li>Manual setup of environments</li>
@@ -60,7 +68,7 @@
                         <li>"Works on my machine" issues</li>
                     </ul>
                 </div>
-                <div class="comp-item">
+                <div class="card">
                     <h4>With Docker</h4>
                     <ul>
                         <li>Consistent environments</li>
@@ -72,19 +80,19 @@
             </div>
             <h3>Key Terms</h3>
             <div class="terms-grid">
-                <div class="term-card">
+                <div class="card">
                     <h4>Image</h4>
                     <p>A lightweight, standalone, executable package that includes everything needed to run a piece of software.</p>
                 </div>
-                <div class="term-card">
+                <div class="card">
                     <h4>Container</h4>
                     <p>A runnable instance of an image. You can start, stop, and delete containers.</p>
                 </div>
-                <div class="term-card">
+                <div class="card">
                     <h4>Docker Engine</h4>
                     <p>The core part of Docker that creates and runs containers using images.</p>
                 </div>
-                <div class="term-card">
+                <div class="card">
                     <h4>Docker Hub</h4>
                     <p>A cloud-based registry where you can find and share Docker images.</p>
                 </div>
@@ -96,7 +104,7 @@
         <div class="container">
             <h2>Installation Guide</h2>
             <div class="install-grid">
-                <div class="install-card">
+                <div class="card">
                     <h3>Windows</h3>
                     <ol>
                         <li>Download Docker Desktop from docker.com</li>
@@ -105,7 +113,7 @@
                         <li>Start Docker Desktop</li>
                     </ol>
                 </div>
-                <div class="install-card">
+                <div class="card">
                     <h3>macOS</h3>
                     <ol>
                         <li>Download Docker Desktop from docker.com</li>
@@ -114,7 +122,7 @@
                         <li>Launch Docker Desktop</li>
                     </ol>
                 </div>
-                <div class="install-card">
+                <div class="card">
                     <h3>Linux</h3>
                     <ol>
                         <li>Update your package index: <code>sudo apt-get update</code></li>
@@ -131,7 +139,7 @@
         <div class="container">
             <h2>Basic Docker Commands</h2>
             <div class="commands-grid">
-                <div class="command-item">
+                <div class="card command-card">
                     <h4>docker --version</h4>
                     <p>Check Docker version</p>
                     <div class="code-block">
@@ -139,7 +147,7 @@
                         <button class="copy-btn" data-command="docker --version">Copy</button>
                     </div>
                 </div>
-                <div class="command-item">
+                <div class="card command-card">
                     <h4>docker pull</h4>
                     <p>Download an image from Docker Hub</p>
                     <div class="code-block">
@@ -147,7 +155,7 @@
                         <button class="copy-btn" data-command="docker pull hello-world">Copy</button>
                     </div>
                 </div>
-                <div class="command-item">
+                <div class="card command-card">
                     <h4>docker images</h4>
                     <p>List downloaded images</p>
                     <div class="code-block">
@@ -155,7 +163,7 @@
                         <button class="copy-btn" data-command="docker images">Copy</button>
                     </div>
                 </div>
-                <div class="command-item">
+                <div class="card command-card">
                     <h4>docker ps</h4>
                     <p>List running containers</p>
                     <div class="code-block">
@@ -163,7 +171,7 @@
                         <button class="copy-btn" data-command="docker ps">Copy</button>
                     </div>
                 </div>
-                <div class="command-item">
+                <div class="card command-card">
                     <h4>docker run</h4>
                     <p>Run a container from an image</p>
                     <div class="code-block">
@@ -171,7 +179,7 @@
                         <button class="copy-btn" data-command="docker run hello-world">Copy</button>
                     </div>
                 </div>
-                <div class="command-item">
+                <div class="card command-card">
                     <h4>docker stop</h4>
                     <p>Stop a running container</p>
                     <div class="code-block">
@@ -179,7 +187,7 @@
                         <button class="copy-btn" data-command="docker stop <container_id>">Copy</button>
                     </div>
                 </div>
-                <div class="command-item">
+                <div class="card command-card">
                     <h4>docker rm</h4>
                     <p>Remove a stopped container</p>
                     <div class="code-block">
@@ -195,7 +203,7 @@
         <div class="container">
             <h2>Build & Run Your First Container</h2>
             <div class="example-steps">
-                <div class="step">
+                <div class="card">
                     <h3>1. Pull an Image</h3>
                     <p>Download the hello-world image from Docker Hub.</p>
                     <div class="code-block">
@@ -203,7 +211,7 @@
                         <button class="copy-btn" data-command="docker pull hello-world">Copy</button>
                     </div>
                 </div>
-                <div class="step">
+                <div class="card">
                     <h3>2. Run the Container</h3>
                     <p>Start a container from the image.</p>
                     <div class="code-block">
@@ -211,7 +219,7 @@
                         <button class="copy-btn" data-command="docker run hello-world">Copy</button>
                     </div>
                 </div>
-                <div class="step">
+                <div class="card">
                     <h3>3. Check Running Containers</h3>
                     <p>See if any containers are running.</p>
                     <div class="code-block">
@@ -219,7 +227,7 @@
                         <button class="copy-btn" data-command="docker ps -a">Copy</button>
                     </div>
                 </div>
-                <div class="step">
+                <div class="card">
                     <h3>4. Stop and Remove</h3>
                     <p>Stop and clean up the container.</p>
                     <div class="code-block">
@@ -265,7 +273,7 @@
                     <label><input type="radio" name="q5" value="b"> A runnable instance of an image</label>
                     <label><input type="radio" name="q5" value="c"> A cloud service</label>
                 </div>
-                <button type="button" class="btn" id="check-answers">Check Answers</button>
+                <button type="button" class="cta-button" id="check-answers">Check Answers</button>
             </form>
             <div id="quiz-result"></div>
         </div>
@@ -320,6 +328,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
